@@ -14,6 +14,11 @@ You can choose the length of the password. It should be at least 8 characters an
 
 ## Screenshots of application
 
+![Alt text](./Screensots/1.png "Welcome screen");
+![Alt text](./Screensots/2.png "Picking the length of password");
+![Alt text](./Screensots/3.png "Picking the type of characters");
+![Alt text](./Screensots/4.png "Picking the type of characters");
+![Alt text](./Screensots/5.png "Generated password")
 
 ## Installation
 
@@ -44,3 +49,5 @@ MIT License
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />    
 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />  
+
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black />  
