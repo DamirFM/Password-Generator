@@ -10,27 +10,27 @@ You can choose the length of the password. It should be at least 8 characters an
 
 ## Link of deployed application.
 
-
+- https://damirfm.github.io/SecureCode-Creator/
 
 ## Screenshots of application
 
-# Welcome screen
+### Welcome screen
 
 ![Alt text](./Screensots/1.png "Welcome screen")
 
-# Picking the length of password
+### Picking the length of password
 
 ![Alt text](./Screensots/2.png "Picking the length of password")
 
-# Picking the type of characters
+### Picking the type of characters
 
 ![Alt text](./Screensots/3.png "Picking the type of characters")
 
-# Picking the type of characters
+### Picking the type of characters
 
 ![Alt text](./Screensots/4.png "Picking the type of characters")
 
-# Generated password
+### Generated password
 
 ![Alt text](./Screensots/5.png "Generated password")
 
