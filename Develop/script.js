@@ -38,6 +38,7 @@ function generatePassword() {
   let finalSet = '';
   // Checking the willing type of characters 
   // If type has been chosen, adding it to the empty string
+  function addStr () {
   if (lowercaseType) {
     finalSet = finalSet.concat(setLowercase);
   }
@@ -50,6 +51,8 @@ function generatePassword() {
   if (specialType) {
     finalSet = finalSet.concat(setOfSpecial);
   }
+}
+  console.log(addStr());
   // Declaring empty string for the password
   let result = '';
   function makePass(passwordLenght, finalSet) {
