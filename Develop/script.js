@@ -14,57 +14,54 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
-  // declaring set of all kind of characters
+  // Declaring set of all kind of characters
   let setUppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let setLowercase = 'abcdefghijklmnopqrstuvwxyz';
-  let setOfNumeric = '0123456789'; 
+  let setOfNumeric = '0123456789';
   let setOfSpecial = "#$%&'()*+,-./:;<=>?@[\]^_`{|}~!";
 
-
-  // making prompt of Acceptance Criteria 
-  let passwordLenght = window.prompt("Enter how many characters passport should have. From 8 characters and no more than 128 characters");
+  // Making prompt of Acceptance Criteria 
+  let passwordLenght = window.prompt("Enter how many characters your passport should have. Choose from 8 characters and no more than 128 characters");
   passwordLenght = Number(passwordLenght);
-
+  // Checking of entering correct Acceptance Criteria 
   if (passwordLenght < 8 || passwordLenght > 128) {
     window.alert('Try again, password lenght should be from 8 to 128');
     return generatePassword();
   }
-  
-  let lowercaseType = window.confirm("lowercase ?");
-  let uppercaseType = window.confirm("uppercase ?");
-  let numericType = window.confirm("numeric ?");
-  let specialType = window.confirm("special ?");
+  // Declaring type of characters and using confirm window method displays a dialog box with a message
+  let lowercaseType = window.confirm("Would you like to add lowercase characters?");
+  let uppercaseType = window.confirm("Would you like to add uppercase characters?");
+  let numericType = window.confirm("Would you like to add numeric characters?");
+  let specialType = window.confirm("Would you like to add special characters?");
 
- 
-    let finalSet = '';
-    if (lowercaseType) {
-      finalSet = finalSet.concat(setLowercase);
+  // Declaring empty string of chosen type of characters 
+  let finalSet = '';
+  // Checking the willing type of characters 
+  // If type has been chosen, adding it to the empty string
+  if (lowercaseType) {
+    finalSet = finalSet.concat(setLowercase);
+  }
+  if (uppercaseType) {
+    finalSet = finalSet.concat(setUppercase);
+  }
+  if (numericType) {
+    finalSet = finalSet.concat(setOfNumeric);
+  }
+  if (specialType) {
+    finalSet = finalSet.concat(setOfSpecial);
+  }
+  // Declaring empty string for the password
+  let result = '';
+  function makePass(passwordLenght, finalSet) {
+  //For loop and Math.random method for picking the random characters from finalSet
+    for (let i = 0; i < passwordLenght; i++) {
+      result += finalSet.charAt(Math.floor(Math.random() * finalSet.length));
     }
-    if (uppercaseType) {
-      finalSet = finalSet.concat(setUppercase);
-    }
-    if (numericType) {
-      finalSet = finalSet.concat(setOfNumeric);
-    }
-    if (specialType) {
-      finalSet = finalSet.concat(setOfSpecial);
-    }
+  }
+  //Call the function
+  console.log(makePass(passwordLenght, finalSet));
 
-  console.log(finalSet);
-
-
- 
-    function makePass (passwordLenght,finalSet ) {
-      let result = '';
-      for (let i = 0; i < passwordLenght; i++){
-        result += finalSet.charAt(Math.floor(Math.random() * finalSet.length));
-      }
-      return result;
-    }
-    makePass();
-    console.log(makePass(passwordLenght,finalSet));
-    window.alert(makePass(passwordLenght,finalSet));
- 
+  return result;
 };
 
 
