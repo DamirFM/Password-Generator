@@ -38,25 +38,25 @@ function generatePassword() {
   let finalSet = '';
   // Checking the willing type of characters 
   // If type has been chosen, adding it to the empty string
-  function addStr () {
-  if (lowercaseType) {
-    finalSet = finalSet.concat(setLowercase);
+  function addStr() {
+    if (lowercaseType) {
+      finalSet = finalSet.concat(setLowercase);
+    }
+    if (uppercaseType) {
+      finalSet = finalSet.concat(setUppercase);
+    }
+    if (numericType) {
+      finalSet = finalSet.concat(setOfNumeric);
+    }
+    if (specialType) {
+      finalSet = finalSet.concat(setOfSpecial);
+    }
   }
-  if (uppercaseType) {
-    finalSet = finalSet.concat(setUppercase);
-  }
-  if (numericType) {
-    finalSet = finalSet.concat(setOfNumeric);
-  }
-  if (specialType) {
-    finalSet = finalSet.concat(setOfSpecial);
-  }
-}
   console.log(addStr());
   // Declaring empty string for the password
   let result = '';
   function makePass(passwordLenght, finalSet) {
-  //For loop and Math.random method for picking the random characters from finalSet
+    //For loop and Math.random method for picking the random characters from finalSet
     for (let i = 0; i < passwordLenght; i++) {
       result += finalSet.charAt(Math.floor(Math.random() * finalSet.length));
     }
